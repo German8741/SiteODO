@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторская экскурсия</title>
+  <!-- Подключение Swiper -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* News Block Styles */
+    .news-block {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 40px;
+      font-family: 'Academy Condensed', sans-serif;
+      border: 1px solid #e0e0e0;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .news-header {
+      padding: 24px 30px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .news-header h2 {
+      font-size: 32px;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 8px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+    }
+
+    .news-date {
+      font-size: 18px;
+      color: #4C4C4C;
+      font-family: 'Myriad Pro', sans-serif;
+      font-style: italic;
+    }
+
+    /* News Slider */
+    .news-slider {
+      width: 100%;
+      position: relative;
+      background: #000;
+    }
+
+    .news-slider .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    .news-slider img {
+      width: auto;
+      height: 70vh;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Slider Navigation */
+    .slider-nav {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slider-dot.active {
+      background: #fff;
+      transform: scale(1.2);
+    }
+
+    /* Slider Arrows */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background: rgba(0, 0, 0, 0.8);
+      transform: scale(1.1);
+    }
+
+    /* News Content */
+    .news-content {
+      padding: 30px;
+      font-family: 'Onest', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .news-content p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* News Footer */
+    .news-footer {
+      padding: 0 30px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .news-link {
+      color: #C40005;
+      font-family: 'Academy Condensed', sans-serif;
+      font-size: 22px;
+      text-decoration: none;
+      position: relative;
+      padding-right: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .news-link:hover {
+      color: #a00004;
+    }
+
+    .news-link::after {
+      content: "→";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+    }
+
+    .news-link:hover::after {
+      transform: translateY(-50%) translateX(4px);
+    }
+
+    .news-social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .news-social a {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+
+    .news-social img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .news-social a:hover img {
+      filter: grayscale(0%);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .news-header {
+        padding: 20px;
+      }
+      
+      .news-header h2 {
+        font-size: 26px;
+      }
+      
+      .news-date {
+        font-size: 16px;
+      }
+      
+      .news-content {
+        padding: 20px;
+      }
+      
+      .news-content p {
+        font-size: 16px;
+      }
+      
+      .news-slider img {
+        height: 50vh;
+      }
+      
+      .news-footer {
+        padding: 0 20px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      
+      .news-link {
+        font-size: 20px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+      }
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 16px;
+      }
+    }
+  </style>
+<header class="header">
+    <div class="header__container">
+      <a href="index.html">
+        <img src="assets/images/logo_dom_oficerov.png" alt="Логотип Дома Офицеров" class="header__logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="afisha.html" class="header__nav-link">Афиша</a></li>
+          <li><a href="zaly.html" class="header__nav-link">Залы</a></li>
+          <li><a href="istoriya.html" class="header__nav-link">История</a></li>
+          <li><a href="muzei.html" class="header__nav-link">Музей</a></li>
+          <li><a href="biblioteka.html" class="header__nav-link">Библиотека</a></li>
+          <li><a href="pushkinskaya-karta.html" class="header__nav-link">Пушкинская карта</a></li>
+          <li><a href="adres.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="новости.html" class="header__news">новости</a>
+        <button class="header__burger">
+          <img src="assets/svg_icons/burger_icon.svg" alt="Menu" class="burger-icon">
+        </button>
+      </div>
+    </div>
+    <div class="header__mobile">
+      <div class="header__mobile-page">
+        <div class="mobile-menu__top">
+          <a href="index.html" class="mobile-menu__title">ДОМ ОФИЦЕРОВ</a>
+          <button class="mobile-menu__close">
+            <img src="assets/svg_icons/close_icon.svg" alt="Close">
+          </button>
+        </div>
+        <nav class="header__mobile-nav">
+          <ul class="header__mobile-nav-list">
+            <li><a href="afisha.html" class="header__mobile-nav-link">Афиша</a></li>
+            <li><a href="zaly.html" class="header__mobile-nav-link">Залы</a></li>
+            <li><a href="istoriya.html" class="header__mobile-nav-link">История</a></li>
+            <li><a href="muzei.html" class="header__mobile-nav-link">Музей</a></li>
+            <li><a href="biblioteka.html" class="header__mobile-nav-link">Библиотека</a></li>
+            <li><a href="pushkinskaya-karta.html" class="header__mobile-nav-link">Пушкинская карта</a></li>
+            <li><a href="adres.html" class="header__mobile-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__contact-line">
+            <div class="mobile-menu__phone">
+              <span class="phone-number" data-telephone="+73433501588">+7 (343) 350-15-88</span>, <span class="phone-label">билетные кассы</span>
+            </div>
+            <div class="mobile-menu__address">Екатеринбург, ул. Первомайская 27</div>
+          </div>
+          <div class="mobile-menu__social">
+            <div class="mobile-menu__social-icons">
+              <a href="https://vk.com/odoural" target="_blank">
+                <img src="assets/svg_icons/вк.png" alt="VK" class="social-icon">
+              </a>
+              <a href="https://rutube.ru/channel/54245019/" target="_blank">
+                <img src="assets/svg_icons/рутуб.png" alt="RuTube" class="social-icon">
+              </a>
+              <a href="https://t.me/odoural" target="_blank">
+                <img src="assets/svg_icons/тг.png" alt="Telegram" class="social-icon">
+              </a>
+            </div>
+            <a href="https://t.me/GermanYusupov" class="mobile-menu__footer-logo">
+              <img src="assets/images/GP_studio_mobile.png" alt="Footer Logo">
+            </a>
+          </div>
+          <div class="mobile-menu__org">
+            © 2025 ФГБУ "Дом офицеров Центрального военного округа"<br>Минобороны России
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay"></div>
+</header>
+</head>
+<body>
+ 
+
+  <main class="main">
+    <div class="news-block">
+      <div class="news-header">
+        <h2>Премьера экскурсии «Дом офицеров: переход времени» и особый взгляд клуба «Е-Катарсис»</h2>
+        <div class="news-date">3 июня 2025</div>
+      </div>
+      
+      <div class="swiper news-slider">
+        <div class="swiper-wrapper">
+          <!-- Продублируем одно фото 8 раз -->
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/RFDZRRLf/telegram-cloud-photo-size-2-5327836029824137791-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/K8pQqzR4/telegram-cloud-photo-size-2-5327836029824137792-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/DZLgwP5b/telegram-cloud-photo-size-2-5327836029824137793-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 3">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/XYqkCbQW/telegram-cloud-photo-size-2-5327836029824137794-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 4">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/T3Bg5WKj/telegram-cloud-photo-size-2-5330072608273722876-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 5">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/HL55wsMq/telegram-cloud-photo-size-2-5327836029824137795-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 6">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/HnS7YJGy/telegram-cloud-photo-size-2-5327836029824137796-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 7">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.postimg.cc/3x0DhJtk/telegram-cloud-photo-size-2-5327836029824137797-y.jpg" alt="Дом офицеров - фото от клуба Е-Катарсис 8">
+          </div>
+        </div>
+        <!-- Добавляем стрелки навигации -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="slider-nav"></div>
+      </div>
+      
+      <div class="news-content">
+        <p>В прошедшее воскресенье состоялась долгожданная премьера авторской экскурсии «Дом офицеров: переход времени».</p>
+        
+        <p>Первыми маршрут прошли члены клуба «Е-Катарсис». Я давно знакома с Анной Филосян, создательницей лучшего, на мой взгляд, источника новостей про культуру в Екатеринбурге — ТГ-канала «Е-Катарсис». То, как она поддерживает, продвигает и рассказывает про культуру, дорогого стоит! Отсюда и желание именно её клубу предоставлять лучшие возможности. И это желание не только у меня...</p>
+        
+        <p>Приглашаю и вас стать членом клуба!</p>
+        
+        <p>Делюсь лучшими кадрами, сделанными клубовцами «Е-Катарсиса». Наслаждайтесь их особым, наполненным чувством эстетики, взглядом на Окружной Дом офицеров Центрального военного округа!</p>
+      </div>
+      
+      <div class="news-footer">
+        <a href="https://t.me/nadya_in_art" class="news-link">Ссылка на тг канал «Е-Катарсис»</a>
+        <div class="news-social">
+          <a href="https://t.me/odoural"><img src="assets/svg_icons/тг.png" alt="Telegram"></a>
+          <a href="https://vk.com/odoural"><img src="assets/svg_icons/вк.png" alt="VK"></a>
+          <a href="https://rutube.ru/channel/54245019/"><img src="assets/svg_icons/рутуб.png" alt="VK"></a>
+        </div>
+      </div> 
+    </div> 
+  </main>
+
+
+ <script src="scripts/main.js"></script>
+  <script src="scripts/header.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="scripts/burger.js?v=1.0"></script>
+     <script src="scripts/footer.js?v=2.0"></script>
+     <script src="scripts/footer.js?v=2.0" async></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const newsSwiper = new Swiper('.news-slider', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.slider-nav',
+          clickable: true,
+          bulletClass: 'slider-dot',
+          bulletActiveClass: 'active',
+          renderBullet: function (index, className) {
+            return '<div class="' + className + '"></div>';
+          },
+        },
+      });
+      
+      // Адаптация высоты слайдов
+      function adjustSliderHeight() {
+        const slider = document.querySelector('.news-slider');
+        if (window.innerWidth <= 768) {
+          slider.style.height = '50vh';
+        } else {
+          slider.style.height = '70vh';
+        }
+      }
+      
+      window.addEventListener('resize', adjustSliderHeight);
+      adjustSliderHeight();
+    });
+  </script>
+</body>
+</html>

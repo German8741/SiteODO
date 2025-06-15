@@ -1,0 +1,313 @@
+@font-face {
+  font-family: 'Academy Condensed';
+  src: url('../assets/fonts/Academy-Condensed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../assets/fonts/MYRIADPRO-REGULAR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('../assets/fonts/Onest-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+
+body {
+  margin: 0;
+  font-family: 'Academy Condensed', sans-serif;
+  background: #F9F9F9;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 50px;
+}
+
+.afisha-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-left: 60px;
+  padding-top: 5px;
+  text-decoration: none;
+}
+
+.afisha-header-title {
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 38px;
+  font-style: italic;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.afisha-header-icon {
+  width: 12px;
+  height: 22px;
+  
+  background-size: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.afisha-header:hover .afisha-header-title {
+  color: #C40005;
+}
+
+.afisha-header:hover .afisha-header-icon {
+  transform: translateX(8px);
+  filter: invert(22%) sepia(84%) saturate(3616%) hue-rotate(349deg) brightness(88%) contrast(88%);
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 30px 60px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overscroll-behavior-x: auto; /* Добавлено для естественной инерции */
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 220px;
+  width: 220px;
+  height: 445px;
+  position: relative;
+  text-decoration: none;
+  border-radius: 16.13px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.card-image {
+  width: 220px;
+  height: 311.67px;
+  border-top-left-radius: 16.13px;
+  border-top-right-radius: 16.13px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: white;
+}
+
+.age-badge {
+  width: 33.73px;
+  height: 33.73px;
+  background: white;
+  border-radius: 9.53px;
+  position: absolute;
+  top: 9.53px;
+  right: 9.53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15.4px;
+  color: black;
+  font-weight: 500;
+}
+
+.price-badge {
+  background: #C40005;
+  border-radius: 9.61px;
+  height: 32px;
+  width: 82px;
+  position: absolute;
+  bottom: 9.53px;
+  left: 9.53px;
+  color: white;
+  font-size: 16.87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.pushkin-badge {
+  width: 33.73px;
+  height: 33.73px;
+  background: white;
+  border-radius: 9.11px;
+  position: absolute;
+  bottom: 9.53px;
+  left: 97.53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pushkin-icon {
+  width: 20.53px;
+  height: 20.53px;
+}
+
+.card-info {
+  width: 220px;
+  height: 134.2px;
+  padding: 8.8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 16.13px;
+  border-bottom-right-radius: 16.13px;
+  background: transparent;
+}
+
+.card-title {
+  font-size: 28.6px;
+  color: black;
+  line-height: 30px;
+  margin-bottom: 9.53px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  height: 60.13px;
+}
+
+.card-date {
+  display: flex;
+  align-items: center;
+  gap: 6.6px;
+  font-size: 22px;
+  color: black;
+  margin-bottom: 3.67px;
+  font-weight: 500;
+  line-height: 1.2;
+  height: 25px;
+}
+
+.date-dot {
+  width: 2.2px;
+  height: 2.2px;
+  background: black;
+  border-radius: 50%;
+}
+
+.card-venue {
+  font-size: 19.8px;
+  color: #4C4C4C;
+  font-weight: 500;
+  line-height: 1.2;
+  height: 25px;
+}
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  .container {
+    padding-top: 30px;
+  }
+  .afisha-header {
+    padding-left: 20px;
+  }
+  .afisha-header-title {
+    font-size: 28px;
+  }
+  .cards {
+    gap: 20px;
+    padding: 15px 20px;
+  }
+  .card {
+    flex: 0 0 170px;
+    width: 170px;
+    height: 344px;
+    border-radius: 12.47px;
+    transition: none; /* Отключаем анимацию */
+  }
+  .card:hover {
+    transform: none; /* Убираем эффект hover */
+  }
+  .card-image {
+    width: 170px;
+    height: 240.83px;
+    border-top-left-radius: 12.47px;
+    border-top-right-radius: 12.47px;
+    background-color: white;
+  }
+  .age-badge {
+    width: 26.07px;
+    height: 26.07px;
+    border-radius: 7.37px;
+    top: 7.37px;
+    right: 7.37px;
+    font-size: 11.9px;
+  }
+  .price-badge {
+    height: 24.93px;
+    width: 63.34px;
+    bottom: 7.37px;
+    left: 7.37px;
+    font-size: 13.03px;
+    border-radius: 7.43px;
+  }
+  .pushkin-badge {
+    width: 26.07px;
+    height: 26.07px;
+    bottom: 7.37px;
+    left: 75.37px;
+    border-radius: 7.04px;
+  }
+  .pushkin-icon {
+    width: 15.87px;
+    height: 15.87px;
+  }
+  .afisha-header-icon {
+  width: 8px;
+  height: 15px;
+  background: url('assets/svg_icons/Vector.png') no-repeat center;
+  background-size: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+  .card-info {
+    width: 170px;
+    height: 103.7px;
+    padding: 6.8px;
+    border-bottom-left-radius: 12.47px;
+    border-bottom-right-radius: 12.47px;
+    background: transparent;
+  }
+  .card-title {
+    font-size: 22.1px;
+    line-height: 23px;
+    height: 46.47px;
+    margin-bottom: 7.37px;
+  }
+  .card-date {
+    font-size: 17px;
+    gap: 5.1px;
+    height: 20px;
+    margin-bottom: 2.83px;
+  }
+  .date-dot {
+    width: 1.7px;
+    height: 1.7px;
+  }
+  .card-venue {
+    font-size: 15.3px;
+    height: 20px;
+  }
+}

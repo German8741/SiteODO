@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вальс Победы</title>
+   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+   <link rel="stylesheet" href="styles/styles.css">
+<style>
+        @font-face {
+            font-family: 'Academy Condensed';
+            src: url('../assets/fonts/Academy-Condensed.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Myriad Pro';
+            src: url('../assets/fonts/MYRIADPRO-REGULAR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Onest';
+            src: url('../assets/fonts/Onest-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Academy Condensed', sans-serif;
+            background: #F9F9F9;
+        }
+
+        .article-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 180px 20px 20px; /* Указанные отступы на ПК */
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-header {
+            text-decoration: none;
+        }
+
+        .article-header-title {
+            font-family: 'Myriad Pro', sans-serif;
+            font-size: 48px;
+            font-style: italic;
+            color: black;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .article-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .article-text {
+            font-family: 'Onest', sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            color: black;
+            opacity: 0.8;
+        }
+
+        .article-video {
+            text-align: center;
+        }
+
+        .article-video h2 {
+            font-family: 'Academy Condensed', sans-serif;
+            text-align: center;
+            color: #4a4a4a;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
+        .article-video div {
+            position: relative;
+            padding-bottom: 56.25%;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #f8f8f8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-video div:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 767px) {
+            .article-container {
+                padding: 110px 20px 20px; /* 60px (хедер) + 20px (отступ) */
+            }
+
+            .article-header-title {
+                font-size: 36px;
+            }
+
+            .article-text {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .article-video div {
+                border-radius: 10px;
+            }
+        }
+</style>
+</head>
+<header class="header">
+    <div class="header__container">
+      <a href="index.html">
+        <img src="assets/images/logo_dom_oficerov.png" alt="Логотип Дома Офицеров" class="header__logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="afisha.html" class="header__nav-link">Афиша</a></li>
+          <li><a href="zaly.html" class="header__nav-link">Залы</a></li>
+          <li><a href="istoriya.html" class="header__nav-link">История</a></li>
+          <li><a href="muzei.html" class="header__nav-link">Музей</a></li>
+          <li><a href="biblioteka.html" class="header__nav-link">Библиотека</a></li>
+          <li><a href="pushkinskaya-karta.html" class="header__nav-link">Пушкинская карта</a></li>
+          <li><a href="adres.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="новости.html" class="header__news">новости</a>
+        <button class="header__burger">
+          <img src="assets/svg_icons/burger_icon.svg" alt="Menu" class="burger-icon">
+        </button>
+      </div>
+    </div>
+    <div class="header__mobile">
+      <div class="header__mobile-page">
+        <div class="mobile-menu__top">
+          <a href="index.html" class="mobile-menu__title">ДОМ ОФИЦЕРОВ</a>
+          <button class="mobile-menu__close">
+            <img src="assets/svg_icons/close_icon.svg" alt="Close">
+          </button>
+        </div>
+        <nav class="header__mobile-nav">
+          <ul class="header__mobile-nav-list">
+            <li><a href="afisha.html" class="header__mobile-nav-link">Афиша</a></li>
+            <li><a href="zaly.html" class="header__mobile-nav-link">Залы</a></li>
+            <li><a href="istoriya.html" class="header__mobile-nav-link">История</a></li>
+            <li><a href="muzei.html" class="header__mobile-nav-link">Музей</a></li>
+            <li><a href="biblioteka.html" class="header__mobile-nav-link">Библиотека</a></li>
+            <li><a href="pushkinskaya-karta.html" class="header__mobile-nav-link">Пушкинская карта</a></li>
+            <li><a href="adres.html" class="header__mobile-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__contact-line">
+            <div class="mobile-menu__phone">
+              <span class="phone-number" data-telephone="+73433501588">+7 (343) 350-15-88</span>, <span class="phone-label">билетные кассы</span>
+            </div>
+            <div class="mobile-menu__address">Екатеринбург, ул. Первомайская 27</div>
+          </div>
+          <div class="mobile-menu__social">
+            <div class="mobile-menu__social-icons">
+              <a href="https://vk.com/odoural" target="_blank">
+                <img src="assets/svg_icons/вк.png" alt="VK" class="social-icon">
+              </a>
+              <a href="https://rutube.ru/channel/54245019/" target="_blank">
+                <img src="assets/svg_icons/рутуб.png" alt="RuTube" class="social-icon">
+              </a>
+              <a href="https://t.me/odoural" target="_blank">
+                <img src="assets/svg_icons/тг.png" alt="Telegram" class="social-icon">
+              </a>
+            </div>
+            <a href="https://t.me/GermanYusupov" class="mobile-menu__footer-logo">
+              <img src="assets/images/GP_studio_mobile.png" alt="Footer Logo">
+            </a>
+          </div>
+          <div class="mobile-menu__org">
+            © 2025 ФГБУ "Дом офицеров Центрального военного округа"<br>Минобороны России
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay"></div>
+</header>
+<body>
+   <section class="article-container">
+        <a href="news.html" class="article-header">
+            <span class="article-header-title">Вальс Победы в Доме офицеров ЦВО</span>
+        </a>
+        <div class="article-content">
+            <div class="article-text">
+                В преддверии 9 мая 2025 года, 7 мая, в Доме офицеров Центрального военного округа (ЦВО) в Екатеринбурге прошла традиционная акция "Вальс Победы". Мероприятие, посвященное 80-летию Победы в Великой Отечественной войне, собрало ветеранов, военнослужащих, студентов и школьников. Участники исполнили вальс под мелодии военных лет, создавая атмосферу единства поколений и благодарности за подвиг героев.
+            </div>
+            <div class="article-text">
+                Акция "Вальс Победы" в Доме офицеров ЦВО стала символом памяти и уважения к истории. Музыка и танцы объединили всех присутствующих, напоминая о значении мира и свободы, завоеванных нашими предками.
+            </div>
+            <div class="article-video">
+                <h2>Вальс Победы</h2>
+                <div>
+                    <iframe src="https://rutube.ru/play/embed/e4743a6155e92142137623452de865af/" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <script src="scripts/main.js"></script>
+  <script src="scripts/header.js"></script>
+
+    <script src="scripts/burger.js?v=1.0"></script>
+     <script src="scripts/footer.js?v=2.0"></script>
+     <script src="scripts/footer.js?v=2.0" async></script>
+</body>
+</html>

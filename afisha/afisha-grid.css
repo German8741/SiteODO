@@ -1,0 +1,453 @@
+@font-face {
+  font-family: 'Academy Condensed';
+  src: url('../assets/fonts/Academy-Condensed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../assets/fonts/MYRIADPRO-REGULAR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('../assets/fonts/Onest-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+
+html, body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.events-detail-section {
+  height: auto;
+  min-height: auto;
+  padding: 10px 0;
+  overflow: visible;
+}
+
+body {
+  margin: 0;
+  font-family: 'Academy Condensed', sans-serif;
+  background: #F9F9F9;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 60px 40px;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+.afisha-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.afisha-header-title {
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 38px;
+  font-style: italic;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.afisha-header-icon {
+  width: 12px;
+  height: 22px;
+  background: url('assets/svg_icons/Vector.png') no-repeat center;
+  background-size: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.afisha-header:hover .afisha-header-title {
+  color: #C40005;
+}
+
+.afisha-header:hover .afisha-header-icon {
+  transform: translateX(8px);
+  filter: invert(22%) sepia(84%) saturate(3616%) hue-rotate(349deg) brightness(88%) contrast(88%);
+}
+
+/* Cards grid */
+.cards-wrapper {
+}
+
+.cards {
+  display: grid;
+  gap: 40px;
+  margin-bottom: 0;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  justify-content: center;
+}
+
+/* Card styles */
+.card {
+  width: 100%;
+  max-width: 220px;
+  height: 445px;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  border-radius: 16.13px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.card-image {
+  width: 100%;
+  height: 311.67px;
+  border-radius: 16.13px 16.13px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  position: relative;
+}
+
+.age-badge {
+  width: 33.73px;
+  height: 33.73px;
+  background: white;
+  border-radius: 9.53px;
+  position: absolute;
+  top: 9.53px;
+  right: 9.53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15.4px;
+  color: black;
+  font-weight: 500;
+}
+
+.price-badge {
+  background: #C40005;
+  border-radius: 9.61px;
+  height: 32px;
+  width: 82px;
+  position: absolute;
+  bottom: 9.53px;
+  left: 9.53px;
+  color: white;
+  font-size: 16.87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.pushkin-badge {
+  width: 33.73px;
+  height: 33.73px;
+  background: white;
+  border-radius: 9.11px;
+  position: absolute;
+  bottom: 9.53px;
+  left: 97.53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pushkin-icon {
+  width: 20.53px;
+  height: 20.53px;
+}
+
+.card-info {
+  width: 100%;
+  height: 134.2px;
+  padding: 8.8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.card-title {
+  font-size: 28.6px;
+  color: black;
+  line-height: 30px;
+  margin-bottom: 9.53px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  height: 60.13px;
+}
+
+.card-date {
+  display: flex;
+  align-items: center;
+  gap: 6.6px;
+  font-size: 22px;
+  color: black;
+  margin-bottom: 3.67px;
+  font-weight: 500;
+}
+
+.date-dot {
+  width: 2.2px;
+  height: 2.2px;
+  background: black;
+  border-radius: 50%;
+}
+
+.card-venue {
+  font-size: 19.8px;
+  color: #4C4C4C;
+  font-weight: 500;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background: #C40005;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 16px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #a30004;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 16px;
+  color: #4C4C4C;
+}
+
+/* Tablet (3 cards in row, adaptive padding) */
+@media (max-width: 1023px) {
+  .container {
+    padding: 20px clamp(30px, 6vw, 60px) 10px;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Mobile (2 cards in row, adaptive padding) */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px clamp(15px, 6vw, 60px) 20px; /* Ув
+    gap: 10px;
+  }
+  
+  .afisha-header {
+    margin: 0;
+  }
+  
+  .afisha-header-title {
+    font-size: 28px;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16.5px;
+    margin-top: -20px;
+    margin-bottom: 0;
+  }
+  
+  .card {
+    max-width: 187px;
+    height: 378.4px;
+    border-radius: 13.717px;
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .card-image {
+    height: 264.893px;
+    border-radius: 13.717px 13.717px 0 0;
+  }
+  
+  .age-badge {
+    width: 28.677px;
+    height: 28.677px;
+    border-radius: 8.107px;
+    top: 8.107px;
+    right: 8.107px;
+    font-size: 13.09px;
+  }
+  
+  .price-badge {
+    height: 27.423px;
+    width: 69.674px;
+    border-radius: 8.173px;
+    bottom: 8.107px;
+    left: 8.107px;
+    font-size: 14.333px;
+  }
+  
+  .pushkin-badge {
+    width: 28.677px;
+    height: 28.677px;
+    bottom: 8.107px;
+    left: 82.907px;
+    border-radius: 7.744px;
+  }
+  
+  .pushkin-icon {
+    width: 17.457px;
+    height: 17.457px;
+  }
+  
+  .card-info {
+    height: 114.07px;
+    padding: 7.48px;
+  }
+  
+  .card-title {
+    font-size: 24.31px;
+    line-height: 25.3px;
+    height: 51.117px;
+    margin-bottom: 8.107px;
+  }
+  
+  .card-date {
+    font-size: 18.7px;
+    gap: 5.61px;
+    margin-bottom: 3.113px;
+  }
+  
+  .date-dot {
+    width: 1.87px;
+    height: 1.87px;
+  }
+  
+  .card-venue {
+    font-size: 16.83px;
+  }
+  
+  .pagination {
+    padding: 10px 0;
+  }
+}
+
+/* Small mobile (2 smaller cards in row, adaptive padding) */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px clamp(10px, 6vw, 60px) 10px;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+    margin-bottom: 0;
+  }
+  
+  .card {
+    max-width: 165px;
+    height: 330px;
+    border-radius: 11px;
+  }
+  
+  .card-image {
+    height: 231px;
+    border-radius: 11px 11px 0 0;
+  }
+  
+  .age-badge {
+    width: 24.2px;
+    height: 24.2px;
+    border-radius: 6.6px;
+    top: 6.6px;
+    right: 6.6px;
+    font-size: 11px;
+  }
+  
+  .price-badge {
+    height: 24.2px;
+    width: 60.5px;
+    border-radius: 6.6px;
+    bottom: 6.6px;
+    left: 6.6px;
+    font-size: 12.1px;
+  }
+  
+  .pushkin-badge {
+    width: 24.2px;
+    height: 24.2px;
+    bottom: 6.6px;
+    left: 71.5px;
+    border-radius: 6.6px;
+  }
+  
+  .pushkin-icon {
+    width: 14.3px;
+    height: 14.3px;
+  }
+  
+  .card-info {
+    height: 99px;
+    padding: 6.6px;
+  }
+  
+  .card-title {
+    font-size: 19.8px;
+    line-height: 22px;
+    height: 44px;
+    margin-bottom: 6.6px;
+  }
+  
+  .card-date {
+    font-size: 15.4px;
+    gap: 4.4px;
+    margin-bottom: 2.2px;
+  }
+  
+  .date-dot {
+    width: 1.65px;
+    height: 1.65px;
+  }
+  
+  .card-venue {
+    font-size: 14.3px;
+  }
+}

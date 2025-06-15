@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /README.md
+
+User-agent: Yandex
+Allow: /
+Disallow: /README.md
+# Clean-param: parameter1&parameter2  # Раскомментируйте, если появятся параметры, создающие дубли
+# Sitemap: https://xn----8sbk4albpx.xn--p1ai/sitemap.xml  # Раскомментируйте, когда создадите карту сайта

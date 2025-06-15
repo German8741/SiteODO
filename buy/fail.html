@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ошибка оплаты</title>
+</head>
+<body>
+  <h1>Ошибка оплаты</h1>
+  <p>Попробуйте снова или свяжитесь с поддержкой.</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const state = params.get('state');
+    const bankInvoiceId = params.get('bankInvoiceId');
+    console.log('State:', state, 'BankInvoiceId:', bankInvoiceId);
+  </script>
+ 
+</body>
+</html>

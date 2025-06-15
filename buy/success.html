@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Оплата успешна</title>
+</head>
+<body>
+  <h1>Оплата прошла успешно!</h1>
+  <p>Спасибо за ваш заказ.</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const state = params.get('state');
+    const bankInvoiceId = params.get('bankInvoiceId');
+    console.log('State:', state, 'BankInvoiceId:', bankInvoiceId);
+  </script>
+
+</body>
+</html>

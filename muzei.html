@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Музей</title>
+   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/muzei.css">
+<style>
+  /* Добавляем новые стили для статьи */
+    .article-content {
+        margin-top: 30px;
+        line-height: 1.6;
+    }
+
+    .article-paragraph {
+        font-size: 22px;
+        margin-bottom: 25px;
+        font-family: 'Myriad Pro', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .highlight {
+        color: #C40005;
+        font-weight: 600;
+    }
+
+    .article-subtitle {
+        font-size: 32px;
+        font-family: 'Academy Condensed', sans-serif;
+        margin: 40px 0 20px;
+        color: #000;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .article-image {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .article-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .article-image figcaption {
+        font-size: 16px;
+        color: #666;
+        margin-top: 10px;
+        font-family: 'Myriad Pro', sans-serif;
+        font-style: italic;
+    }
+
+    .article-link {
+        color: #C40005;
+        text-decoration: none;
+        border-bottom: 1px solid #C40005;
+        transition: all 0.2s ease;
+    }
+
+    .article-link:hover {
+        color: #a30004;
+        border-bottom-color: #a30004;
+    }
+
+    /* Адаптивные стили */
+    @media (max-width: 768px) {
+        .article-paragraph {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .article-subtitle {
+            font-size: 26px;
+            margin: 30px 0 15px;
+        }
+        
+        .article-image {
+            margin: 20px 0;
+        }
+        
+        .article-image figcaption {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .article-paragraph {
+            font-size: 16px;
+        }
+        
+        .article-subtitle {
+            font-size: 22px;
+        }
+    }
+</style>
+</head>
+<body>
+  <!-- хедер -->
+<header class="header">
+    <div class="header__container">
+      <a href="index.html">
+        <img src="assets/images/logo_dom_oficerov.png" alt="Логотип Дома Офицеров" class="header__logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="afisha.html" class="header__nav-link">Афиша</a></li>
+          <li><a href="zaly.html" class="header__nav-link">Залы</a></li>
+          <li><a href="istoriya.html" class="header__nav-link">История</a></li>
+          <li><a href="muzei.html" class="header__nav-link">Музей</a></li>
+          <li><a href="biblioteka.html" class="header__nav-link">Библиотека</a></li>
+          <li><a href="pushkinskaya-karta.html" class="header__nav-link">Пушкинская карта</a></li>
+          <li><a href="adres.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="новости.html" class="header__news">новости</a>
+        <button class="header__burger">
+          <img src="assets/svg_icons/burger_icon.svg" alt="Menu" class="burger-icon">
+        </button>
+      </div>
+    </div>
+    <div class="header__mobile">
+      <div class="header__mobile-page">
+        <div class="mobile-menu__top">
+          <a href="index.html" class="mobile-menu__title">ДОМ ОФИЦЕРОВ</a>
+          <button class="mobile-menu__close">
+            <img src="assets/svg_icons/close_icon.svg" alt="Close">
+          </button>
+        </div>
+        <nav class="header__mobile-nav">
+          <ul class="header__mobile-nav-list">
+            <li><a href="afisha.html" class="header__mobile-nav-link">Афиша</a></li>
+            <li><a href="zaly.html" class="header__mobile-nav-link">Залы</a></li>
+            <li><a href="istoriya.html" class="header__mobile-nav-link">История</a></li>
+            <li><a href="muzei.html" class="header__mobile-nav-link">Музей</a></li>
+            <li><a href="biblioteka.html" class="header__mobile-nav-link">Библиотека</a></li>
+            <li><a href="pushkinskaya-karta.html" class="header__mobile-nav-link">Пушкинская карта</a></li>
+            <li><a href="adres.html" class="header__mobile-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__contact-line">
+            <div class="mobile-menu__phone">
+              <span class="phone-number" data-telephone="+73433501588">+7 (343) 350-15-88</span>, <span class="phone-label">билетные кассы</span>
+            </div>
+            <div class="mobile-menu__address">Екатеринбург, ул. Первомайская 27</div>
+          </div>
+          <div class="mobile-menu__social">
+            <div class="mobile-menu__social-icons">
+              <a href="https://vk.com/odoural" target="_blank">
+                <img src="assets/svg_icons/вк.png" alt="VK" class="social-icon">
+              </a>
+              <a href="https://rutube.ru/channel/54245019/" target="_blank">
+                <img src="assets/svg_icons/рутуб.png" alt="RuTube" class="social-icon">
+              </a>
+              <a href="https://t.me/odoural" target="_blank">
+                <img src="assets/svg_icons/тг.png" alt="Telegram" class="social-icon">
+              </a>
+            </div>
+            <a href="https://t.me/GermanYusupov" class="mobile-menu__footer-logo">
+              <img src="assets/images/GP_studio_mobile.png" alt="Footer Logo">
+            </a>
+          </div>
+          <div class="mobile-menu__org">
+            © 2025 ФГБУ "Дом офицеров Центрального военного округа"<br>Минобороны России
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay"></div>
+</header>
+  <!-- хедер -->
+  <main class="main">
+    <!-- инфа -->
+   <div class="container">
+    <div class="left-column">
+        <div class="left-sidebar">
+            <div class="schedule-title">Режим работы</div>
+            <div class="schedule-items">
+                <div class="schedule-item monday">
+                    <span class="day">Понедельник</span>
+                    <span class="time">выходной</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Вторник</span>
+                    <span class="time">10:00 - 16:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Среда</span>
+                  <span class="time">10:00 - 16:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Четверг</span>
+                   <span class="time">10:00 - 16:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Пятница</span>
+                   <span class="time">10:00 - 16:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Суббота</span>
+                    <span class="time">10:00 - 16:00</span>
+                </div>
+                <div class="schedule-item sunday">
+                    <span class="day">Воскресенье</span>
+                    <span class="time">10:00 - 15:00</span>
+                </div>
+            </div>
+            <a href="оплата.html" class="buy-ticket">
+                <div class="buy-ticket-text">Купить билет</div>
+            </a>
+        </div>
+    </div>
+
+  <div class="content">
+   <div class="article-header">
+    <h1 class="article-title">
+        Военно-исторический музей:<br>
+        хранитель боевой славы<br>
+        Уральского военного округа
+    </h1>
+</div>
+
+        
+        <p class="article-paragraph">
+            Музей Боевой славы Урала был создан <span class="highlight">15 июля 1959 года</span> как народный музей. В 1987 году было построено трёхэтажное здание, пристроенное к Дому офицеров, где <span class="highlight">30 сентября 1988 года</span> открылась новая экспозиция Военно-исторического музея.
+        </p>
+
+        <figure class="article-image">
+            <img src="/assets/images/muzei1.jpg" alt="Экспозиция музея">
+            <figcaption>Здание Военно-исторического музея при Доме офицеров</figcaption>
+        </figure>
+
+        <p class="article-paragraph">
+            Обновлённая экспозиция посвящена героям фронта и тыла. На первом этаже представлены <span class="highlight">образцы оружия с XVII века</span>, награды, обмундирование и интерактивный стол с биографиями военных конструкторов.
+        </p>
+
+        <p class="article-paragraph">
+            На втором этаже — вклад Урала в Победу, <span class="highlight">11 мультимедийных инсталляций</span>, диорама «Форсирование Днепра» с эффектом присутствия, исторические таблички и зеркало времени с интерактивными мониторами.
+        </p>
+
+        <figure class="article-image">
+            <img src="/assets/images/muzei-odo-ural.jpg" alt="Экспонаты музея">
+            <figcaption>Экспозиция, посвященная Великой Отечественной войне</figcaption>
+        </figure>
+
+        <p class="article-paragraph">
+            Также доступны цифровые подшивки газет, фильмы, материалы о «Бессмертном полке» и раздел по локальным боевым операциям. Третий этаж рассказывает об истории вооружённых сил в период <span class="highlight">с 1945 по 2015 год</span>. Более 250 фондовых единиц раскрывают тему послевоенного развития округа.
+        </p>
+
+       
+    </div>
+</div>
+</div>
+   <!-- инфа -->
+    
+  
+ 
+  <script src="scripts/main.js"></script>
+
+    <script src="scripts/burger.js?v=1.0"></script>
+     <script src="scripts/footer.js?v=2.0"></script>
+</body>
+</html>

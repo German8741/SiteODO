@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  <title>Дом Офицеров</title>
+ <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="buy/buy.css">
+</head>
+<body>
+  <!-- хедер -->
+<header class="header">
+    <div class="header__container">
+      <a href="index.html">
+        <img src="assets/images/logo_dom_oficerov.png" alt="Логотип Дома Офицеров" class="header__logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="afisha.html" class="header__nav-link">Афиша</a></li>
+          <li><a href="zaly.html" class="header__nav-link">Залы</a></li>
+          <li><a href="istoriya.html" class="header__nav-link">История</a></li>
+          <li><a href="muzei.html" class="header__nav-link">Музей</a></li>
+          <li><a href="biblioteka.html" class="header__nav-link">Библиотека</a></li>
+          <li><a href="pushkinskaya-karta.html" class="header__nav-link">Пушкинская карта</a></li>
+          <li><a href="adres.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="новости.html" class="header__news">новости</a>
+        <button class="header__burger">
+          <img src="assets/svg_icons/burger_icon.svg" alt="Menu" class="burger-icon">
+        </button>
+      </div>
+    </div>
+    <div class="header__mobile">
+      <div class="header__mobile-page">
+        <div class="mobile-menu__top">
+          <a href="index.html" class="mobile-menu__title">ДОМ ОФИЦЕРОВ</a>
+          <button class="mobile-menu__close">
+            <img src="assets/svg_icons/close_icon.svg" alt="Close">
+          </button>
+        </div>
+        <nav class="header__mobile-nav">
+          <ul class="header__mobile-nav-list">
+            <li><a href="afisha.html" class="header__mobile-nav-link">Афиша</a></li>
+            <li><a href="zaly.html" class="header__mobile-nav-link">Залы</a></li>
+            <li><a href="istoriya.html" class="header__mobile-nav-link">История</a></li>
+            <li><a href="muzei.html" class="header__mobile-nav-link">Музей</a></li>
+            <li><a href="biblioteka.html" class="header__mobile-nav-link">Библиотека</a></li>
+            <li><a href="pushkinskaya-karta.html" class="header__mobile-nav-link">Пушкинская карта</a></li>
+            <li><a href="adres.html" class="header__mobile-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__contact-line">
+            <div class="mobile-menu__phone">
+              <span class="phone-number" data-telephone="+73433501588">+7 (343) 350-15-88</span>, <span class="phone-label">билетные кассы</span>
+            </div>
+            <div class="mobile-menu__address">Екатеринбург, ул. Первомайская 27</div>
+          </div>
+          <div class="mobile-menu__social">
+            <div class="mobile-menu__social-icons">
+              <a href="https://vk.com/odoural" target="_blank">
+                <img src="assets/svg_icons/вк.png" alt="VK" class="social-icon">
+              </a>
+              <a href="https://rutube.ru/channel/54245019/" target="_blank">
+                <img src="assets/svg_icons/рутуб.png" alt="RuTube" class="social-icon">
+              </a>
+              <a href="https://t.me/odoural" target="_blank">
+                <img src="assets/svg_icons/тг.png" alt="Telegram" class="social-icon">
+              </a>
+            </div>
+            <a href="https://t.me/GermanYusupov" class="mobile-menu__footer-logo">
+              <img src="assets/images/GP_studio_mobile.png" alt="Footer Logo">
+            </a>
+          </div>
+          <div class="mobile-menu__org">
+            © 2025 ФГБУ "Дом офицеров Центрального военного округа"<br>Минобороны России
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay"></div>
+</header>
+  <!-- хедер -->
+  <main class="main">
+    <!-- инфа -->
+  <div class="payment-wrapper">
+    <div class="order-block">
+      <h1 class="order-title">Ваш заказ</h1>
+      <div class="ticket-control">
+        <div class="ticket-label">Кол-во билетов</div>
+        <div class="ticket-counter">
+          <button class="counter-btn">
+            <img src="assets/svg_icons/minus.png" alt="Уменьшить">
+          </button>
+          <div class="ticket-count">1</div>
+          <button class="counter-btn">
+            <img src="assets/svg_icons/plus.png" alt="Увеличить">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-data-block">
+      <h2 class="user-data-title">Ваши данные</h2>
+      
+      <div class="form-group">
+        <label class="form-label">E-mail</label>
+        <input type="email" class="form-input" placeholder="example@email.ru">
+        <p class="form-hint">На эту электронную почту будут отправлены билеты</p>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Фамилия</label>
+        <input type="text" class="form-input" placeholder="Юсупов">
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Имя</label>
+        <input type="text" class="form-input" placeholder="Герман">
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Телефон</label>
+        <input type="tel" class="form-input" placeholder="8 (952) 812-52-52">
+        <p class="form-hint">
+          Указывайте <span class="highlight">настоящие</span> имя, фамилию и телефон —<br>
+          в случае утери билета восстановление осуществляется <span class="highlight">на основе этих данных</span>
+        </p>
+      </div>
+      
+      <button class="payment-btn">Оплатить</button>
+      
+      <p class="terms-text">
+        Нажимая кнопку «Оплатить», вы соглашаетесь с <a href="#" class="terms-link">условиями</a>
+      </p>
+    </div>
+  </div>
+   <!-- инфа -->
+    
+
+ <script src="/buy/index.umd.cjs"></script>
+<script src="/buy/buy.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/header.js"></script>
+
+    <script src="scripts/burger.js?v=1.0"></script>
+     <script src="scripts/footer.js?v=2.0"></script>
+     <script src="scripts/footer.js?v=2.0" async></script>
+</body>
+</html>

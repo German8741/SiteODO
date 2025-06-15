@@ -1,0 +1,372 @@
+/* Main Content */
+.main {
+  padding-top: 145px;
+  min-height: calc(100vh - 145px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html {
+  touch-action: manipulation;
+}
+
+/* Payment Block Styles */
+.payment-wrapper {
+  width: 100%;
+  max-width: 417px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.order-block {
+  background: white;
+  border-radius: 25.07px;
+  padding: 35.54px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.order-title {
+  color: black;
+  font-size: 27.57px;
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: 600;
+  line-height: 41.36px;
+  margin: 0 0 35.54px 0;
+}
+
+.ticket-control {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.ticket-label {
+  width: 230px;
+  height: 50.94px;
+  padding: 12.53px;
+  border-radius: 6.27px;
+  outline: 1.25px #DEDEDE solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Academy Condensed', sans-serif;
+  font-size: 27.57px;
+  font-weight: 500;
+  line-height: 25.07px;
+  white-space: nowrap;
+}
+
+.ticket-counter {
+  display: flex;
+  align-items: center;
+  gap: 12.53px;
+}
+
+.ticket-count {
+  width: 48.05px;
+  height: 50.94px;
+  padding: 12.53px;
+  border-radius: 6.27px;
+  outline: 1.25px #DEDEDE solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C40005;
+  font-family: 'Academy Condensed', sans-serif;
+  font-size: 27.57px;
+  font-weight: 500;
+  line-height: 25.07px;
+}
+
+.counter-btn {
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.user-data-block {
+  background: white;
+  border-radius: 21.16px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.user-data-title {
+  color: black;
+  font-size: 23.27px;
+  font-family: 'Myriad Pro', sans-serif;
+  font-weight: 600;
+  line-height: 34.91px;
+  margin: 0 0 30px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  color: black;
+  font-size: 23.27px;
+  font-family: 'Academy Condensed', sans-serif;
+  font-weight: 500;
+  line-height: 21.16px;
+  margin-bottom: 5.29px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12.7px 14.81px;
+  border-radius: 5.29px;
+  border: 1.06px solid #DEDEDE;
+  box-sizing: border-box;
+  font-family: 'Academy Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.39px;
+  color: black;
+  opacity: 0.5;
+}
+
+.form-hint {
+  color: black;
+  font-size: 16px;
+  font-family: 'Academy Condensed', sans-serif;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.form-hint .highlight {
+  color: #C40005;
+}
+
+.payment-btn {
+  width: 100%;
+  padding: 15px;
+  background: #C40005;
+  border-radius: 12.7px;
+  border: none;
+  color: white;
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.payment-btn:hover {
+  background: #A30000;
+}
+
+.terms-text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-family: 'Academy Condensed', sans-serif;
+  font-weight: 500;
+  line-height: 21.16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.terms-link {
+  color: #C40005;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1440px) {
+  .main {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .payment-wrapper {
+    max-width: 417px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .payment-wrapper {
+    max-width: 380px;
+    padding: 15px;
+  }
+  
+  .order-block {
+    padding: 30px;
+    border-radius: 20px;
+  }
+  
+  .order-title {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .ticket-control {
+    gap: 40px;
+  }
+  
+  .ticket-label {
+    width: 170px;
+    height: 45px;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+  
+  .ticket-count {
+    width: 50px;
+    height: 45px;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+  
+  .counter-btn {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .user-data-block {
+    padding: 25px;
+    border-radius: 18px;
+  }
+  
+  .user-data-title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  
+  .form-label {
+    font-size: 20px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .form-input {
+    padding: 11px 13px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  .form-hint {
+    font-size: 15px;
+  }
+  
+  .payment-btn {
+    padding: 13px;
+    font-size: 17px;
+    border-radius: 11px;
+  }
+  
+  .terms-text {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 86px;
+  }
+  
+  .payment-wrapper {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .order-block {
+    padding: 25px;
+    border-radius: 18px;
+  }
+  
+  .order-title {
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 25px;
+  }
+  
+  .ticket-control {
+    gap: 30px;
+  }
+  
+  .ticket-label {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  
+  .ticket-count {
+    width: 45px;
+    height: 40px;
+    padding: 10px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  
+  .counter-btn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .user-data-block {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .user-data-title {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .form-input {
+    padding: 10px 12px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
+  .form-hint {
+    font-size: 14px;
+  }
+  
+  .payment-btn {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  
+  .terms-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библиотека</title>
+   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/muzei.css">
+<style>
+  /* Добавляем новые стили для статьи */
+  .article-content {
+      margin-top: 30px;
+      line-height: 1.6;
+  }
+
+  .article-paragraph {
+      font-size: 22px;
+      margin-bottom: 25px;
+      font-family: 'Myriad Pro', sans-serif;
+      color: #333;
+      line-height: 1.6;
+  }
+
+  .highlight {
+      color: #C40005;
+      font-weight: 600;
+  }
+
+  .article-subtitle {
+      font-size: 32px;
+      font-family: 'Academy Condensed', sans-serif;
+      margin: 40px 0 20px;
+      color: #000;
+      font-weight: 600;
+      line-height: 1.3;
+  }
+
+  .article-image {
+      margin: 30px 0;
+      text-align: center;
+  }
+
+  .article-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .article-image figcaption {
+      font-size: 16px;
+      color: #666;
+      margin-top: 10px;
+      font-family: 'Myriad Pro', sans-serif;
+      font-style: italic;
+  }
+
+  .article-link {
+      color: #C40005;
+      text-decoration: none;
+      border-bottom: 1px solid #C40005;
+      transition: all 0.2s ease;
+  }
+
+  .article-link:hover {
+      color: #a30004;
+      border-bottom-color: #a30004;
+  }
+
+  /* Адаптивные стили */
+  @media (max-width: 768px) {
+      .article-paragraph {
+          font-size: 18px;
+          margin-bottom: 20px;
+      }
+      
+      .article-subtitle {
+          font-size: 26px;
+          margin: 30px 0 15px;
+      }
+      
+      .article-image {
+          margin: 20px 0;
+      }
+      
+      .article-image figcaption {
+          font-size: 14px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .article-paragraph {
+          font-size: 16px;
+      }
+      
+      .article-subtitle {
+          font-size: 22px;
+      }
+  }
+
+</style>
+</head>
+<body>
+  <!-- хедер -->
+<header class="header">
+    <div class="header__container">
+      <a href="index.html">
+        <img src="assets/images/logo_dom_oficerov.png" alt="Логотип Дома Офицеров" class="header__logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="afisha.html" class="header__nav-link">Афиша</a></li>
+          <li><a href="zaly.html" class="header__nav-link">Залы</a></li>
+          <li><a href="istoriya.html" class="header__nav-link">История</a></li>
+          <li><a href="muzei.html" class="header__nav-link">Музей</a></li>
+          <li><a href="biblioteka.html" class="header__nav-link">Библиотека</a></li>
+          <li><a href="pushkinskaya-karta.html" class="header__nav-link">Пушкинская карта</a></li>
+          <li><a href="adres.html" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a href="новости.html" class="header__news">новости</a>
+        <button class="header__burger">
+          <img src="assets/svg_icons/burger_icon.svg" alt="Menu" class="burger-icon">
+        </button>
+      </div>
+    </div>
+    <div class="header__mobile">
+      <div class="header__mobile-page">
+        <div class="mobile-menu__top">
+          <a href="index.html" class="mobile-menu__title">ДОМ ОФИЦЕРОВ</a>
+          <button class="mobile-menu__close">
+            <img src="assets/svg_icons/close_icon.svg" alt="Close">
+          </button>
+        </div>
+        <nav class="header__mobile-nav">
+          <ul class="header__mobile-nav-list">
+            <li><a href="afisha.html" class="header__mobile-nav-link">Афиша</a></li>
+            <li><a href="zaly.html" class="header__mobile-nav-link">Залы</a></li>
+            <li><a href="istoriya.html" class="header__mobile-nav-link">История</a></li>
+            <li><a href="muzei.html" class="header__mobile-nav-link">Музей</a></li>
+            <li><a href="biblioteka.html" class="header__mobile-nav-link">Библиотека</a></li>
+            <li><a href="pushkinskaya-karta.html" class="header__mobile-nav-link">Пушкинская карта</a></li>
+            <li><a href="adres.html" class="header__mobile-nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__contact-line">
+            <div class="mobile-menu__phone">
+              <span class="phone-number" data-telephone="+73433501588">+7 (343) 350-15-88</span>, <span class="phone-label">билетные кассы</span>
+            </div>
+            <div class="mobile-menu__address">Екатеринбург, ул. Первомайская 27</div>
+          </div>
+          <div class="mobile-menu__social">
+            <div class="mobile-menu__social-icons">
+              <a href="https://vk.com/odoural" target="_blank">
+                <img src="assets/svg_icons/вк.png" alt="VK" class="social-icon">
+              </a>
+              <a href="https://rutube.ru/channel/54245019/" target="_blank">
+                <img src="assets/svg_icons/рутуб.png" alt="RuTube" class="social-icon">
+              </a>
+              <a href="https://t.me/odoural" target="_blank">
+                <img src="assets/svg_icons/тг.png" alt="Telegram" class="social-icon">
+              </a>
+            </div>
+            <a href="https://t.me/GermanYusupov" class="mobile-menu__footer-logo">
+              <img src="assets/images/GP_studio_mobile.png" alt="Footer Logo">
+            </a>
+          </div>
+          <div class="mobile-menu__org">
+            © 2025 ФГБУ "Дом офицеров Центрального военного округа"<br>Минобороны России
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay"></div>
+</header>
+  <!-- хедер -->
+  <main class="main">
+    <!-- инфа -->
+<div class="container">
+    <div class="left-column">
+        <div class="left-sidebar">
+            <div class="schedule-title">Режим работы</div>
+            <div class="schedule-items">
+                <div class="schedule-item monday">
+                    <span class="day">Понедельник</span>
+                    <span class="time">выходной</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Вторник</span>
+                    <span class="time">10:00 - 17:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Среда</span>
+                    <span class="time">10:00 - 17:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Четверг</span>
+                    <span class="time">10:00 - 17:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Пятница</span>
+                    <span class="time">10:00 - 17:00</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">Суббота</span>
+                    <span class="time">10:00 - 17:00</span>
+                </div>
+                <div class="schedule-item sunday">
+                    <span class="day">Воскресенье</span>
+                    <span class="time">10:00 - 17:00</span>
+                </div>
+            </div>
+            <a href="#" class="buy-ticket">
+                <div class="buy-ticket-text">Вход бесплатный</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="article-header">
+            <h1 class="article-title">
+                Библиотека Дома офицеров ЦВО:<br>
+                хранительница военной истории<br>
+                и культурного наследия Урала
+            </h1>
+        </div>
+
+        <div class="article-content">
+            <figure class="article-image">
+                <img src="https://static.wixstatic.com/media/a53ecc_c75fbf09188d45aa9ea2addf2a365860~mv2.jpg" alt="Библиотека ОДО">
+                <figcaption>Читальный зал библиотеки Дома офицеров ЦВО</figcaption>
+            </figure>
+
+            <p class="article-paragraph highlight">
+                Библиотека Дома офицеров Центрального военного округа — уникальное культурное пространство, сохраняющее литературное наследие военной истории России. Основанная в <span class="highlight">1930-х годах</span>, она продолжает служить офицерам, ветеранам и всем ценителям военной истории.
+            </p>
+
+            <h2 class="article-subtitle">История формирования фондов</h2>
+            
+            <p class="article-paragraph">
+                Книжный фонд библиотеки начал формироваться через <span class="highlight">военный книжный коллектор</span> и авторские дары. Даже в тяжелые годы Великой Отечественной войны библиотека не прекращала свою работу, став духовной опорой для бойцов.
+            </p>
+
+            <figure class="article-image">
+                <img src="https://static.wixstatic.com/media/a53ecc_146edcf7e4fe4e8e80df9c65a09f1890~mv2.jpg" alt="Редкие книги">
+                <figcaption>Редкие издания из фондов библиотеки</figcaption>
+            </figure>
+
+            <p class="article-paragraph">
+                Сегодня библиотека располагает уникальной коллекцией, включающей книги издательства <span class="highlight">И.Д. Сытина</span>, дореволюционные издания, подшивки газет с <span class="highlight">1939 года</span> и современные военно-исторические исследования.
+            </p>
+
+            <h2 class="article-subtitle">Культурно-просветительская деятельность</h2>
+            
+            <p class="article-paragraph">
+                Библиотека активно участвует в культурной жизни Дома офицеров, организуя выставки, циклы лекций <span class="highlight">"История Отечества"</span> и <span class="highlight">"Дни воинской славы"</span>. Особое внимание уделяется экспозициям прижизненных изданий и книг военного времени.
+            </p>
+
+            <figure class="article-image">
+                <img src="https://static.wixstatic.com/media/a53ecc_e2d0c866cbbb410bb222dedd49020bc4~mv2.jpg" alt="Книжная выставка">
+                <figcaption>Тематическая выставка в библиотеке</figcaption>
+            </figure>
+
+            <h2 class="article-subtitle">Современные форматы работы</h2>
+            
+            <p class="article-paragraph">
+                В читальном зале организован <span class="highlight">правовой уголок</span> с материалами о социальной защите военнослужащих. Для офицеров и контрактников проводятся тематические обзоры литературы в помощь боевой и общественно-государственной подготовке.
+            </p>
+
+            <figure class="article-image">
+                <img src="https://static.wixstatic.com/media/a53ecc_3e7bdacd2ce14703b26b8eccf9d2aaf0~mv2.jpg" alt="Современные форматы">
+                <figcaption>Современное пространство библиотеки</figcaption>
+            </figure>
+
+            <h2 class="article-subtitle">Методический центр</h2>
+            
+            <p class="article-paragraph">
+                Библиотека служит <span class="highlight">методическим центром</span> для воинских частей округа. Командование, ветераны и читатели активно участвуют в пополнении фондов, даря книги, в том числе с автографами авторов.
+            </p>
+
+            <figure class="article-image">
+                <img src="https://static.wixstatic.com/media/a53ecc_8cd6ff7b5056433f8f1b04a51f95dea6~mv2.jpg" alt="Методическая поддержка">
+                <figcaption>Работа с воинскими частями округа</figcaption>
+            </figure>
+
+          
+
+        </div>
+    </div>
+</div>
+
+   <!-- инфа -->
+    
+  
+
+  <script src="scripts/main.js"></script>
+
+    <script src="scripts/burger.js?v=1.0"></script>
+    <script src="scripts/footer.js?v=2.0"></script>
+    <script src="scripts/footer.js?v=2.0" async></script>
+</body>
+</html>
